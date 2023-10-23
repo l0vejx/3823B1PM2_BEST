@@ -1,3 +1,9 @@
 unsigned char max_byte(unsigned short number) {
-    return 0; // Not implementation
+    int t;
+    while (number > 0){
+        number/=2;
+        t=number%2;
+    }
+    
+    return 0;
 }

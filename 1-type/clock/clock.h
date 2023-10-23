@@ -1,3 +1,3 @@
 int get_time(long long angle) {
-    return 0; // Not implementation
+    return (angle / 360) * 100 + (angle - ((angle / 360) * 360))/6;
 }

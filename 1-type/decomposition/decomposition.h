@@ -7,7 +7,12 @@ int reverse(int number) {
 }
 
 double decomposition(int number) {
-    return 0; // Not implementation
+    double a,b,c,d;
+    a = 1 / ((double)((number / 1000) * 1000));
+    b = 1 / ((double)((number / 100) % 10) * 100);
+    c = 1 / ((double)((number / 10) % 10) * 10);
+    d = 1 / ((double)(number % 10));
+    return 4/(a+b+c+d);
 }
 
 int append(int number, int start, int end) {
