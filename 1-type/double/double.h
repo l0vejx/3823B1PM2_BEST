@@ -20,5 +20,16 @@ int get_nearest_int(double x) {
 }
 
 double get_fractional(double x) {
-    return 0.1;
+    int a=x/1;
+    if (x>0){
+        return x-a;
+    }
+    else{
+        if (abs(x-a)<0.5){
+            return fabs((a-1)-x);
+        }
+        else{
+            return fabs(x-a);
+        }
+    }
 }
