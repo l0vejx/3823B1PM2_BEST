@@ -1,9 +1,6 @@
 unsigned char max_byte(unsigned short number) {
-    int t;
-    while (number > 0){
-        number/=2;
-        t=number%2;
-    }
-    
-    return 0;
+    unsigned short p = number >> 8;
+    unsigned short m = (unsigned char)number;
+    if (p > m) return p;
+    else return m;
 }
