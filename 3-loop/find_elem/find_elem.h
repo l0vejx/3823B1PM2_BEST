@@ -1,15 +1,15 @@
 #include <math.h>
 
 int find_elem(int left, int right, int number, int max_iter){
-    int i = 1, p;
-    p = left + right;
+    int i = 0, mid, a = left;
     while (left <= right){
-        if (p / 2 > number)
-            number = number / 2;
-        else if (p / 2 < number)
-            number = number * 2;
-        else if (p == number)
-            return i*(number - left);
         i += 1;
+        mid = (left + right) / 2;
+        if (number > mid) left = mid + 1;
+        else if (number == mid) return ((number - a) * i);
+        else right = mid - 1;
     }
+
+    return i;
+
 }
